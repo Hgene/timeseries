@@ -19,6 +19,7 @@ class dtw:
     dtw_dist : minimum culmulative distance(~cost) to (i,j) coordinate
 
     '''
+
     def __init__(self, x, y, i, j):
         self.x = x
         self.y = y
@@ -50,6 +51,7 @@ class dtw:
             self.dist_mat[i, j] = result
 
         return result
+
 
     ''' extract shortest path to (i,j) coordinate'''
     def dtw_path(self, i, j, dis_mat):
