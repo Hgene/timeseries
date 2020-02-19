@@ -56,7 +56,6 @@ def train(train_inout, epochs = 150, lr = 0.0001):
     print(model)
 
     #Train model
-
     for i in range(epochs):
         for seq, labels in train_inout:
             optimizer.zero_grad()
@@ -71,7 +70,6 @@ def train(train_inout, epochs = 150, lr = 0.0001):
 
         if i % 25 == 1:
             print('epoch: {}, loss: {}'.format(i, single_loss.item()))
-
     print('epoch: {}, loss: {}'.format(i, single_loss.item()))
 
     return model
@@ -138,6 +136,7 @@ def main():
     plt.plot(all_data)
     plt.plot(x,preds)
     plt.show()
+
 
 if __name__ == '__main__':
     main()
